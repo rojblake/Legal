@@ -1,0 +1,24 @@
+{
+    "name": "zikula/legalmodule-module",
+    "description": "Provides an interface for managing the site's legal documents",
+    "type": "zikula-module",
+    "license": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "Zikula",
+            "homepage": "http://www.zikula.org/",
+            "email": "admin@zikula.org"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Zikula\\LegalModule\\": "" }
+    },
+    "require": {
+        "php": ">5.3.3"
+    },
+    "extra": {
+        "zikula": {
+            "class": "Zikula\\LegalModule\\ZikulaLegalModule"
+        }
+    }
+}

@@ -12,10 +12,12 @@
  * information regarding copyright and licensing.
  */
 
+namespace Zikula\LegalModule;
+
 /**
  * Provides version information for the Legal module.
  */
-class Legal_Version extends Zikula_AbstractVersion
+class LegalModuleVersion extends \Zikula_AbstractVersion
 {
     /**
      * Retrieve version and other metadata for the Legal module.
@@ -45,5 +47,4 @@ class Legal_Version extends Zikula_AbstractVersion
                 ),
         );
     }
-
 }
