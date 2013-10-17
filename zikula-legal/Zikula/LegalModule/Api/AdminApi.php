@@ -12,12 +12,16 @@
  * information regarding copyright and licensing.
  */
 
+namespace Zikula\LegalModule\Api;
+
+use SecurityUtil;
+use ModUtil;
+
 /**
  * Administrative API functions.
  */
-class Legal_Api_Admin extends Zikula_AbstractApi
+class AdminApi extends \Zikula_AbstractApi
 {
-
     /**
      * Reset the agreement to the terms of use for a specific group of users, or all users.
      *

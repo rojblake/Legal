@@ -12,10 +12,16 @@
  * information regarding copyright and licensing.
  */
 
+namespace Zikula\LegalModule\Controller;
+
+use ModUtil;
+use SecurityUtil;
+use Zikula\LegalModule\Constant as LegalConstant;
+
 /**
  * Administrator-initiated actions for the Legal module.
  */
-class Legal_Controller_Admin extends Zikula_AbstractController
+class AdminController extends \Zikula_AbstractController
 {
     /**
      * The main administration entry point.

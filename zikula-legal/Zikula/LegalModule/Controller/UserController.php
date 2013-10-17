@@ -12,10 +12,12 @@
  * information regarding copyright and licensing.
  */
 
+namespace Zikula\LegalModule\Controller;
+ 
 /**
  * Module controller for user-related operations.
  */
-class Legal_Controller_User extends Zikula_AbstractController
+class UserController extends \Zikula_AbstractController
 {
 
     /**
