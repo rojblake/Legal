@@ -34,51 +34,51 @@
  */
 function smarty_function_legaluserlinks($params, &$view)
 {
-    $dom = ZLanguage::getModuleDomain(Legal_Constant::MODNAME);
+    $dom = ZLanguage::getModuleDomain(Zikula\LegalModule\Constant::MODNAME);
     $policies = array();
-    if (ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_LEGALNOTICE_ACTIVE, false)) {
-        $url = ModUtil::url(Legal_Constant::MODNAME, 'user', 'legalNotice');
-        $customUrl = ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_LEGALNOTICE_URL, '');
+    if (ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_LEGALNOTICE_ACTIVE, false)) {
+        $url = ModUtil::url(Zikula\LegalModule\Constant::MODNAME, 'user', 'legalNotice');
+        $customUrl = ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_LEGALNOTICE_URL, '');
         if (!empty($customUrl)) {
             $url = $customUrl;
         }
         $policies['legalNotice'] = array('title' => __('Legal notice', $dom), 'url' => $url);
     }
-    if (ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_TERMS_ACTIVE, false)) {
-        $url = ModUtil::url(Legal_Constant::MODNAME, 'user', 'termsOfUse');
-        $customUrl = ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_TERMS_URL, '');
+    if (ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_TERMS_ACTIVE, false)) {
+        $url = ModUtil::url(Zikula\LegalModule\Constant::MODNAME, 'user', 'termsOfUse');
+        $customUrl = ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_TERMS_URL, '');
         if (!empty($customUrl)) {
             $url = $customUrl;
         }
         $policies['termsOfUse'] = array('title' => __('Terms of use', $dom), 'url' => $url);
     }
-    if (ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_PRIVACY_ACTIVE, false)) {
-        $url = ModUtil::url(Legal_Constant::MODNAME, 'user', 'privacyPolicy');
-        $customUrl = ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_PRIVACY_URL, '');
+    if (ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_PRIVACY_ACTIVE, false)) {
+        $url = ModUtil::url(Zikula\LegalModule\Constant::MODNAME, 'user', 'privacyPolicy');
+        $customUrl = ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_PRIVACY_URL, '');
         if (!empty($customUrl)) {
             $url = $customUrl;
         }
         $policies['privacyPolicy'] = array('title' => __('Privacy policy', $dom), 'url' => $url);
     }
-    if (ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_TRADECONDITIONS_ACTIVE, false)) {
-        $url = ModUtil::url(Legal_Constant::MODNAME, 'user', 'tradeConditions');
-        $customUrl = ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_TRADECONDITIONS_URL, '');
+    if (ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_TRADECONDITIONS_ACTIVE, false)) {
+        $url = ModUtil::url(Zikula\LegalModule\Constant::MODNAME, 'user', 'tradeConditions');
+        $customUrl = ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_TRADECONDITIONS_URL, '');
         if (!empty($customUrl)) {
             $url = $customUrl;
         }
         $policies['tradeConditions'] = array('title' => __('Trade conditions', $dom), 'url' => $url);
     }
-    if (ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_CANCELLATIONRIGHTPOLICY_ACTIVE, false)) {
-        $url = ModUtil::url(Legal_Constant::MODNAME, 'user', 'cancellationRightPolicy');
-        $customUrl = ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_CANCELLATIONRIGHTPOLICY_URL, '');
+    if (ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_CANCELLATIONRIGHTPOLICY_ACTIVE, false)) {
+        $url = ModUtil::url(Zikula\LegalModule\Constant::MODNAME, 'user', 'cancellationRightPolicy');
+        $customUrl = ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_CANCELLATIONRIGHTPOLICY_URL, '');
         if (!empty($customUrl)) {
             $url = $customUrl;
         }
         $policies['cancellationRightPolicy'] = array('title' => __('Cancellation right', $dom), 'url' => $url);
     }
-    if (ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_ACCESSIBILITY_ACTIVE, false)) {
-        $url = ModUtil::url(Legal_Constant::MODNAME, 'user', 'accessibilityStatement');
-        $customUrl = ModUtil::getVar(Legal_Constant::MODNAME, Legal_Constant::MODVAR_PRIVACY_URL, '');
+    if (ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_ACCESSIBILITY_ACTIVE, false)) {
+        $url = ModUtil::url(Zikula\LegalModule\Constant::MODNAME, 'user', 'accessibilityStatement');
+        $customUrl = ModUtil::getVar(Zikula\LegalModule\Constant::MODNAME, Zikula\LegalModule\Constant::MODVAR_PRIVACY_URL, '');
         if (!empty($customUrl)) {
             $url = $customUrl;
         }

@@ -18,6 +18,7 @@ use ModUtil;
 use SecurityUtil;
 use SessionUtil;
 use UserUtil;
+use ZLanguage;
 use Zikula\LegalModule\Constant as LegalConstant;
 
 /**
@@ -35,7 +36,6 @@ class UserController extends \Zikula_AbstractController
      */
     public function mainAction()
     {
-        echo 1;
         $url = $this->getVar(LegalConstant::MODVAR_TERMS_URL, '');
         if (empty($url)) {
             $url = ModUtil::url($this->name, 'user', 'termsOfUse');
@@ -70,7 +70,7 @@ class UserController extends \Zikula_AbstractController
     {
         // Security check
         if (!SecurityUtil::checkPermission($this->name . '::' . $accessInstanceKey, '::', ACCESS_OVERVIEW)) {
-            throw new Zikula_Exception_Forbidden();
+            throw new \Zikula_Exception_Forbidden();
         }
 
         if (!$this->getVar($activeFlagKey)) {
