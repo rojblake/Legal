@@ -89,6 +89,7 @@ class UserController extends \Zikula_AbstractController
                 }
 
                 return $this->view->assign('languageCode', $languageCode)
+                        ->assign('documentName', $documentName)
                         ->fetch($template);
             } else {
                 $this->redirect($customUrl);

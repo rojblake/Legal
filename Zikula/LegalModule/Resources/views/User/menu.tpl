@@ -4,7 +4,7 @@
 {pagesetvar name='title' value=$templatetitle}
 
 <div class="z-menu">
-    {legaluserlinks}
+    {legaluserlinks documentName=$documentName}
 </div>
 
 {insert name='getstatusmsg'}

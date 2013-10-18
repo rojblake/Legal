@@ -22,10 +22,11 @@
  *      legal_function_legaluserlinks.tpl
  *
  * Template Parameters:
- *      string $params['start']     DEPRECATED, modify the template instead; The string to display before all of the links; optional; default '['.
- *      string $params['end']       DEPRECATED, modify the template instead; The string to display between each of the links; optional; default '|'.
- *      string $params['separator'] DEPRECATED, modify the template instead; The string to display before all of the links; optional; default ']'.
- *      string $params['class']     DEPRECATED, modify the template instead; The string to display before all of the links; optional; default 'z-menuitem-title'.
+ *      string $params['documentName']  The document currently being displayed
+ *      string $params['start']         DEPRECATED, modify the template instead; The string to display before all of the links; optional; default '['.
+ *      string $params['end']           DEPRECATED, modify the template instead; The string to display between each of the links; optional; default '|'.
+ *      string $params['separator']     DEPRECATED, modify the template instead; The string to display before all of the links; optional; default ']'.
+ *      string $params['class']         DEPRECATED, modify the template instead; The string to display before all of the links; optional; default 'z-menuitem-title'.
  *
  * @param array       $params All parameters passed to this function from the template.
  * @param Zikula_View &$view  Reference to the Zikula view object, a subclass of Smarty.
@@ -86,12 +87,13 @@ function smarty_function_legaluserlinks($params, &$view)
     }
 
     $templateVariables = array(
-        'policies'  => $policies,
-        'domain'    => $dom,
-        'start'     => isset($params['start'])     ? $params['start']     : '',
-        'end'       => isset($params['end'])       ? $params['end']       : '',
-        'seperator' => isset($params['seperator']) ? $params['seperator'] : '',
-        'class'     => isset($params['class'])     ? $params['class']     : '',
+        'policies'      => $policies,
+        'domain'        => $dom,
+        'documentName'  => isset($params['documentName'])   ? $params['documentName']   : '',
+        'start'         => isset($params['start'])          ? $params['start']          : '',
+        'end'           => isset($params['end'])            ? $params['end']            : '',
+        'seperator'     => isset($params['seperator'])      ? $params['seperator']      : '',
+        'class'         => isset($params['class'])          ? $params['class']          : 'nav nav-pills',
     );
 
     return $view->assign($templateVariables)
