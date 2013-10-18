@@ -87,7 +87,7 @@ class AdminController extends \Zikula_AbstractController
         $this->checkCsrfToken();
 
         // set our module variables
-        $legalNoticeActive = $this->request->request->get(LegalConstant::MODVAR_LEGALNOTICE_ACTIVE, true);
+        $legalNoticeActive = $this->request->request->get(LegalConstant::MODVAR_LEGALNOTICE_ACTIVE, false);
         $this->setVar(LegalConstant::MODVAR_LEGALNOTICE_ACTIVE, $legalNoticeActive);
 
         $termsOfUseActive = $this->request->request->get(LegalConstant::MODVAR_TERMS_ACTIVE, false);
