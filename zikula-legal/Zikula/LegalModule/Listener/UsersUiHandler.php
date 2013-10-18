@@ -20,6 +20,7 @@ use LogUtil;
 use ModUtil;
 use UserUtil;
 use Zikula\LegalModule\Constant as LegalConstant;
+use Zikula\LegalModule\Helper\AcceptPolicies;
 
 /**
  * Handles hook-like event notifications from log-in and registration for the acceptance of policies.
@@ -79,7 +80,7 @@ class UsersUiHandler extends \Zikula_AbstractEventHandler
         $this->request = $this->serviceManager->getService('request');
         $this->domain = ZLanguage::getModuleDomain($this->name);
 
-        $this->helper = new Legal_Helper_AcceptPolicies();
+        $this->helper = new AcceptPolicies();
     }
 
     public function getView()

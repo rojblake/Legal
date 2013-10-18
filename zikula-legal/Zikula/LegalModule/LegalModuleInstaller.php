@@ -47,9 +47,9 @@ class LegalModuleInstaller extends \Zikula_AbstractInstaller
         $this->setVar(LegalConstant::MODVAR_MINIMUM_AGE, 13);
 
         // Set up the persistent event handler, hook bundles, and any other event-related features.
-        //EventUtil::registerPersistentModuleHandler($this->name, 'user.login.veto', 
-        //                                           array('Zikula\LegalModule\Listener\UsersLoginVetoListener', 'acceptPoliciesListener'));
-        //EventUtil::registerPersistentEventHandlerClass($this->name, 'Zikula\LegalModule\Listener\UsersUiHandler');
+        EventUtil::registerPersistentModuleHandler($this->name, 'user.login.veto', 
+                                                   array('Zikula\LegalModule\Listener\UsersLoginVetoListener', 'acceptPoliciesListener'));
+        EventUtil::registerPersistentEventHandlerClass($this->name, 'Zikula\LegalModule\Listener\UsersUiHandler');
 
         // Initialization successful
         return true;

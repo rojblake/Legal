@@ -20,7 +20,6 @@ use ModUtil;
 use UserUtil;
 use Zikula\LegalModule\Constant as LegalConstant;
 
-
 /**
  * Provides listeners (handlers) for several events, including 'get.pendingcontent', and 'users.login.veto'.
  *
