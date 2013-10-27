@@ -142,7 +142,7 @@ class UsersUiHandler extends \Zikula_AbstractEventHandler
      *
      * @return void
      */
-    public function uiView(Zikula_Event $event)
+    public function uiView(\Zikula_Event $event)
     {
         $activePolicies = $this->helper->getActivePolicies();
         $activePolicyCount = array_sum($activePolicies);
@@ -175,7 +175,7 @@ class UsersUiHandler extends \Zikula_AbstractEventHandler
      *
      * @return void
      */
-    public function uiEdit(Zikula_Event $event)
+    public function uiEdit(\Zikula_Event $event)
     {
         $activePolicies = $this->helper->getActivePolicies();
         $activePolicyCount = array_sum($activePolicies);
@@ -278,7 +278,7 @@ class UsersUiHandler extends \Zikula_AbstractEventHandler
      * @throws Zikula_Exception_Fatal Thrown if the user record retrieved from the POST is in an unexpected form or its data is
      *      unexpected.
      */
-    public function validateEdit(Zikula_Event $event)
+    public function validateEdit(\Zikula_Event $event)
     {
         if (!$this->request->isPost()) {
             // Check if we got here by a reentrant login method.
@@ -462,7 +462,7 @@ class UsersUiHandler extends \Zikula_AbstractEventHandler
      *
      * @throws Zikula_Exception_Fatal Thrown if a user account does not exist for the uid specified by the event.
      */
-    public function processEdit(Zikula_Event $event)
+    public function processEdit(\Zikula_Event $event)
     {
         $activePolicies = $this->helper->getActivePolicies();
         $eventName = $event->getName();
